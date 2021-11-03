@@ -11,7 +11,7 @@ import okhttp3.RequestBody
 abstract class BaseRequest<T> {
 
     fun getRequestBody():RequestBody{
-        return RequestBody.create("text/html;charset=utf-8".toMediaTypeOrNull(), GsonUtil.gsonInstance.toJson(this))
+        return RequestBody.create("application/json; charset=utf-8".toMediaTypeOrNull(), GsonUtil.gsonInstance.toJson(this))
     }
 
     fun getUrl():String{
